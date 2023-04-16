@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreDataValidation;
 use App\Models\data;
 use Illuminate\Http\Request;
 
@@ -26,9 +27,9 @@ class DataController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreDataValidation $request)
     {
-        dd($request->all());
+        dd($request);
     }
 
     /**
